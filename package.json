@@ -1,0 +1,15 @@
+{
+  "name": "go-gh-pages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/munky69rock/go-gh-pages.git",
+  "author": "Masayuki Uehara <uehara.masayuki@dena.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "jsesc": "^2.2.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "uglify-js": "^2.7.5"
+  }
+}

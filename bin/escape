@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const jsesc = require('jsesc');
+
+let buf = '';
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', chunk => buf += chunk);
+process.stdin.on('end', () => {
+  process.stdout.write(jsesc(buf, { escapeEverything: true }));
+}).resume();

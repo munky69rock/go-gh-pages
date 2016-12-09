@@ -31,13 +31,13 @@ generate: readme docs
 
 readme:
 	@$(ECHO) "$$README"        > README.md
-	@$(ECHO) ""               >> README.md
+	@$(ECHO)                  >> README.md
 	@$(ECHO) '```javascript'  >> README.md
 	@$(ECHO) -n "javascript:" >> README.md
 	@$(COMPILE)               >> README.md
-	@$(ECHO) ""               >> README.md
+	@$(ECHO)                  >> README.md
 	@$(ECHO) '```'            >> README.md
-	@$(ECHO) ""               >> README.md
+	@$(ECHO)                  >> README.md
 
 docs:
 	@$(PUG) src/*.pug -o docs -O '{ title: "$(TITLE)", code: "'$$( $(COMPILE) | $(ESCAPE) )'" }'

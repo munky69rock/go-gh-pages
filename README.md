@@ -5,8 +5,6 @@ generate bookmarklet
 --------------------
 
 ```sh
-$ npm install -g yarn
-$ yarn
 $ make
 ```
 

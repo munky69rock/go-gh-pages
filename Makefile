@@ -15,8 +15,6 @@ generate bookmarklet
 --------------------
 
 ```sh
-$$ npm install -g yarn
-$$ yarn
 $$ make
 ```
 
@@ -27,7 +25,11 @@ endef
 
 export README
 
-generate: readme docs
+generate: node_modules readme docs
+
+node_modules:
+	@npm install -g yarn
+	@yarn
 
 readme:
 	@$(ECHO) "$$README"        > README.md
@@ -42,4 +44,4 @@ readme:
 docs:
 	@$(PUG) src/*.pug -o docs -O '{ title: "$(TITLE)", code: "'$$( $(COMPILE) | $(ESCAPE) )'" }'
 
-.PHONY: all generate yarn docs
+.PHONY: generate docs readme
